@@ -6,6 +6,8 @@ const Project = ({project}) => {
     window.location.href = project.github;
   }
 
+  const imgURL = `https://jacob-peach-se.onrender.com${project.pic}`;
+  
   return (
     <div className="flex relative bg-gray-100 my-20 rounded-full justify-end">
       <div className={`w-100 -ml-[calc((100vw-100%)/2)] flex justify-end items-center rounded-r-[160px] rounded-bl-[60px] bg-yellow-300 h-50`}>
@@ -34,7 +36,7 @@ const Project = ({project}) => {
       </div>
       <div className=" flex justify-end">
         <div onClick={handleRedirect} className="relative rounded-full group h-50 w-50">
-          <img src={project.pic} className="transition rounded-full object-cover group-hover:grayscale group-hover:blur-sm h-50 w-60"/>
+          <img src={imgURL} className="transition rounded-full object-cover group-hover:grayscale group-hover:blur-sm h-50 w-60"/>
           <GitHubIcon style={{fontSize: "64px" }} className="opacity-0 group-hover:opacity-100 absolute transition-opacity duration-300 inset-x-17 inset-y-17"/>
         </div>
       </div>
